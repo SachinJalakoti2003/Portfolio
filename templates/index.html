@@ -1,0 +1,712 @@
+{% extends 'base.html' %}
+{% block title %}Sachin Jalakoti | Portfolio{% endblock %}
+{% block content %}
+<!-- Home Section -->
+<section id="home" class="py-5" style="background: #111;">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <!-- Left: Image -->
+            <div class="col-lg-6 text-center mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="profile-image-container" style="display: inline-block; border: 6px solid #FFA500; border-radius: 50%; padding: 8px;">
+                    <img src="{{ url_for('static', filename='profile_img/sachin.jpg') }}" alt="Sachin Jalakoti"
+                        class="rounded-circle shadow-lg" style="width: 350px; height: 350px; object-fit: cover;">
+                </div>
+            </div>
+            <!-- Right: Text -->
+            <div class="col-lg-6 text-center text-lg-start" data-aos="fade-left">
+                <p class="text-white" style="font-size: 2rem;">Hi, I am</p>
+                <h1 class="fw-bold text-white mb-3" style="font-size: 4rem;">Sachin Jalakoti</h1>
+                <h2 class="mb-4" style="color: #FFA500; font-size: 2.5rem;">
+                    <span id="typed-role"></span>
+                </h2>
+                <p class="lead text-light mb-4" style="font-size: 1.5rem;">
+                    <span style="color: #FFA500; font-size: 1.3em; vertical-align: middle;">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    Solapur, Maharashtra, India
+                </p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                    <a href="#portfolio" class="btn btn-orange">
+                        <i class="fas fa-briefcase me-2"></i>View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline-orange">
+                        <i class="fas fa-envelope me-2"></i>Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Me Section -->
+<section id="about" class="py-5" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title text-orange mb-4">About Me</h2>
+        <p class="text-light mb-4" style="font-size: 1.15rem; max-width: 900px; line-height: 1.8;">
+            A recent B.Tech graduate in Computer Science and Engineering with a strong passion for Data Science, Machine
+            Learning, and Artificial Intelligence. Experienced in building real-world projects such as chatbots, image
+            colorization systems, and student performance trackers. Skilled in Python, SQL, Power BI, Flask, and
+            PyTorch, with a keen interest in turning data into meaningful insights. Actively seeking opportunities as a
+            Data Analyst or AI/ML Engineer to apply technical skills and grow in the field of data-driven technologies.
+        </p>
+        <ul class="nav nav-tabs mb-4" id="aboutTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="education-tab" data-bs-toggle="tab" data-bs-target="#education"
+                    type="button" role="tab">EDUCATION</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button"
+                    role="tab">SKILLS</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience"
+                    type="button" role="tab">EXPERIENCE</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="aboutTabsContent">
+            <!-- Education Tab -->
+            <div class="tab-pane fade show active" id="education" role="tabpanel">
+                <ul class="text-light">
+                    <li class="d-flex align-items-center mb-4">
+                        <img src="{{ url_for('static', filename='logos/mit.jpeg') }}" width="100"
+                            class="me-4 rounded shadow" style="vertical-align: middle;">
+                        <div>
+                            <div
+                                style="font-size: 1.3rem; font-weight: 700; font-family: 'Segoe UI', 'Arial', sans-serif; color: #FFA500;">
+                                B.Tech in Computer Science & Engineering</div>
+                            <div
+                                style="font-size: 1.1rem; font-weight: 500; font-family: 'Montserrat', 'Arial', sans-serif; color: #fff;">
+                                MIT College of Railway Engineering & Research, Barshi</div>
+                            <div style="font-size: 1rem; font-weight: 400; color: #bbb;">Percentage - 80%</div>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-4">
+                        <img src="{{ url_for('static', filename='logos/svit.jpeg') }}" width="100"
+                            class="me-4 rounded shadow" style="vertical-align: middle;">
+                        <div>
+                            <div
+                                style="font-size: 1.3rem; font-weight: 700; font-family: 'Segoe UI', 'Arial', sans-serif; color: #FFA500;">
+                                Diploma in Computer Science & Engineering</div>
+                            <div
+                                style="font-size: 1.1rem; font-weight: 500; font-family: 'Montserrat', 'Arial', sans-serif; color: #fff;">
+                                Swami Vivekanand Institute of Technology, Solapur</div>
+                            <div style="font-size: 1rem; font-weight: 400; color: #bbb;">Percentage - 77.77%</div>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-4">
+                        <img src="{{ url_for('static', filename='logos/ssc.png') }}" width="100"
+                            class="me-4 rounded shadow" style="vertical-align: middle;">
+                        <div>
+                            <div
+                                style="font-size: 1.3rem; font-weight: 700; font-family: 'Segoe UI', 'Arial', sans-serif; color: #FFA500;">
+                                10th</div>
+                            <div
+                                style="font-size: 1.1rem; font-weight: 500; font-family: 'Montserrat', 'Arial', sans-serif; color: #fff;">
+                                Mathura Highschool, Ichalkaranji</div>
+                            <div style="font-size: 1rem; font-weight: 400; color: #bbb;">Percentage - 83.40%</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Skills Tab -->
+            <div class="tab-pane fade" id="skills" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row text-center mb-4">
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fab fa-python" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Python</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-database" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">MySQL</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-chart-bar" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Power BI</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-fire" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">PyTorch</div>
+                        </div>
+                    </div>
+                    <div class="row text-center mb-4">
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-eye" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">OpenCV</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-language" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">NLP</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-brain" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">LLM</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-link" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Langchain</div>
+                        </div>
+                    </div>
+                    <div class="row text-center mb-4">
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-robot" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Gen AI</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-file-excel" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Excel</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-project-diagram" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">TensorFlow</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-cogs" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Machine Learning</div>
+                        </div>
+                    </div>
+                    <div class="row text-center mb-4">
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-network-wired" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Deep Learning</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-chart-line" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Statistics</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-calculator" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">NumPy</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-table" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Pandas</div>
+                        </div>
+                    </div>
+                    <div class="row text-center mb-4">
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-chart-area" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Matplotlib</div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px; background: #FFA500; border-radius: 8px; margin: 0 auto;">
+                                <i class="fas fa-chart-pie" style="font-size: 24px; color: #111;"></i>
+                            </div>
+                            <div style="font-weight: 600; color: #FFA500;">Seaborn</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Experience Tab -->
+            <div class="tab-pane fade" id="experience" role="tabpanel">
+                <ul class="text-light">
+                    <li class="d-flex align-items-center mb-4">
+                        <img src="{{ url_for('static', filename='logos/testbook.png') }}" alt="Testbook" width="120"
+                            height="120" class="me-4 rounded shadow"
+                            style="object-fit: contain; vertical-align: middle;">
+                        <div style="flex: 1;">
+                            <div style="font-size: 1.25rem; font-weight: 700; color: #FFA500;">Skill Academy by Testbook
+                            </div>
+                            <div style="font-size: 1.1rem; font-weight: 600; color: #fff;">Business/Data Analyst Intern
+                            </div>
+                            <div style="font-size: 1rem; color: #fff; margin-top: 0.5rem;"><span
+                                    style="font-weight: 600; color: #FFA500;">Project:</span> Western Countries Sales
+                                Data Analysis</div>
+                            <div style="font-size: 1rem; color: #fff;"><span
+                                    style="font-weight: 600; color: #FFA500;">Technology Used:</span> Excel, SQL,
+                                Python, Statistics, Power BI</div>
+                            <button type="button" class="btn btn-orange mt-3 me-2" data-bs-toggle="modal"
+                                data-bs-target="#testbookCertModal">View Certificate</button>
+                            <a href="{{ url_for('static', filename='certifications/Testbook Internship.jpg') }}"
+                                class="btn btn-outline-orange mt-3" target="_blank" download>Download Certificate</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-5" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title text-orange mb-4">Portfolio</h2>
+        <div class="row g-4">
+            <!-- Project 1: AI Interview Coach -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card bg-dark text-light h-100 d-flex flex-column">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-orange mb-3">AI Interview Coach</h5>
+                        <p class="card-text flex-grow-1">An intelligent interview preparation platform that provides personalized coaching, mock interviews, and real-time feedback using AI to help candidates excel in their job interviews.</p>
+                        <div class="mt-auto">
+                            <a href="https://ai-interview-1-nbc9.onrender.com" class="btn btn-orange me-2 mb-2" target="_blank">🔗 View Project</a>
+                            <a href="https://github.com/SachinJalakoti2003/AI_Interview" class="btn btn-outline-orange mb-2" target="_blank">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2: FitBot -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card bg-dark text-light h-100 d-flex flex-column">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-orange mb-3">FitBot – Health Chatbot</h5>
+                        <p class="card-text flex-grow-1">An intelligent health chatbot that provides personalized fitness advice, BMI calculations, and health recommendations. Built with Flask and Gemini API for natural language processing.</p>
+                        <div class="mt-auto">
+                            <a href="https://chatbot-fitbot-2.onrender.com/" class="btn btn-orange me-2 mb-2" target="_blank">🔗 View Project</a>
+                            <a href="https://github.com/SachinJalakoti2003/Chatbot-Fitbot-" class="btn btn-outline-orange mb-2" target="_blank">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3: Automatic Colorization -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card bg-dark text-light h-100 d-flex flex-column">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-orange mb-3">Automatic Colorization of Grayscale Image</h5>
+                        <p class="card-text flex-grow-1">A deep learning project that automatically adds realistic colors to grayscale images using advanced neural networks and OpenCV. Upload any black and white image and watch it come to life with AI-powered colorization.</p>
+                        <div class="mt-auto">
+                            <a href="https://finalproject-2-7rm6.onrender.com/" class="btn btn-orange me-2 mb-2" target="_blank">🔗 View Project</a>
+                            <a href="https://github.com/SachinJalakoti2003/FinalProject" class="btn btn-outline-orange mb-2" target="_blank">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4: Western Countries Sales Data Analysis -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card bg-dark text-light h-100 d-flex flex-column">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-orange mb-3">Western Countries Sales Data Analysis</h5>
+                        <p class="card-text flex-grow-1">A comprehensive business analytics project analyzing sales data from Western countries using Python, SQL, and Power BI. Features interactive dashboards with market trends, customer insights, and revenue patterns visualization.</p>
+                        <div class="mt-auto">
+                            <a href="https://app.powerbi.com/groups/cefbb70e-552b-418d-b994-59233f2388a4/reports/674f93da-fcef-4dac-9e3f-f59577c42d24/ReportSection8c3b2170d62ee0349427?experience=power-bi" class="btn btn-orange me-2 mb-2" target="_blank">📊 View Dashboard</a>
+                            <a href="https://github.com/SachinJalakoti2003/Western-Sales-Data-Tracker" class="btn btn-outline-orange mb-2" target="_blank">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 5: Student Performance Tracker -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card bg-dark text-light h-100 d-flex flex-column">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-orange mb-3">Student Performance Tracker</h5>
+                        <p class="card-text flex-grow-1">A comprehensive SQL-based analytics project tracking student performance with interactive Power BI dashboards. Features detailed performance metrics, feedback analysis, and progress visualization for educational insights.</p>
+                        <div class="mt-auto">
+                            <a href="https://app.powerbi.com/groups/me/reports/8f0957f4-1a65-4299-ba3f-2dcc0bb40fbd/ReportSection?experience=power-bi" class="btn btn-orange me-2 mb-2" target="_blank">📊 View Dashboard</a>
+                            <a href="https://github.com/SachinJalakoti2003/SQL_Project-Student-Performance-Feedback-Tracker-" class="btn btn-outline-orange mb-2" target="_blank">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Certifications Section -->
+<section id="certifications" class="py-5" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title text-orange mb-4">Certifications</h2>
+        <div class="row g-4">
+            <!-- Certificate 1: MLDS_geekforgeeks -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('static', filename='certifications/MLDS_geekforgeeks.jpg') }}"
+                            alt="MLDS GeekforGeeks" class="img-fluid mb-3"
+                            style="max-height: 180px; border-radius: 8px;">
+                        <h5 class="card-title text-orange">MLDS - GeekforGeeks</h5>
+                        <button type="button" class="btn btn-orange mt-2" data-bs-toggle="modal"
+                            data-bs-target="#certModal1">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 2: Business Analytics -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('static', filename='certifications/Business_Analytics Certificate.jpg') }}"
+                            alt="Business Analytics" class="img-fluid mb-3"
+                            style="max-height: 180px; border-radius: 8px;">
+                        <h5 class="card-title text-orange">Business Analytics</h5>
+                        <button type="button" class="btn btn-orange mt-2" data-bs-toggle="modal"
+                            data-bs-target="#certModal2">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 3: Excel -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('static', filename='certifications/Excel.jpg') }}" alt="Excel"
+                            class="img-fluid mb-3" style="max-height: 180px; border-radius: 8px;">
+                        <h5 class="card-title text-orange">Excel</h5>
+                        <button type="button" class="btn btn-orange mt-2" data-bs-toggle="modal"
+                            data-bs-target="#certModal3">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 4: Statistics -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('static', filename='certifications/Statistics.jpg') }}" alt="Statistics"
+                            class="img-fluid mb-3" style="max-height: 180px; border-radius: 8px;">
+                        <h5 class="card-title text-orange">Statistics</h5>
+                        <button type="button" class="btn btn-orange mt-2" data-bs-toggle="modal"
+                            data-bs-target="#certModal4">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 5: SQL -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('static', filename='certifications/SQL.jpg') }}" alt="SQL"
+                            class="img-fluid mb-3" style="max-height: 180px; border-radius: 8px;">
+                        <h5 class="card-title text-orange">SQL</h5>
+                        <button type="button" class="btn btn-orange mt-2" data-bs-toggle="modal"
+                            data-bs-target="#certModal5">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 6: Python -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('static', filename='certifications/Python.jpg') }}" alt="Python"
+                            class="img-fluid mb-3" style="max-height: 180px; border-radius: 8px;">
+                        <h5 class="card-title text-orange">Python</h5>
+                        <button type="button" class="btn btn-orange mt-2" data-bs-toggle="modal"
+                            data-bs-target="#certModal6">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 7: Tableau -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('static', filename='certifications/Tableau.jpg') }}" alt="Tableau"
+                            class="img-fluid mb-3" style="max-height: 180px; border-radius: 8px;">
+                        <h5 class="card-title text-orange">Tableau</h5>
+                        <button type="button" class="btn btn-orange mt-2" data-bs-toggle="modal"
+                            data-bs-target="#certModal7">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 8: Power BI -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('static', filename='certifications/Power BI.jpg') }}" alt="Power BI"
+                            class="img-fluid mb-3" style="max-height: 180px; border-radius: 8px;">
+                        <h5 class="card-title text-orange">Power BI</h5>
+                        <button type="button" class="btn btn-orange mt-2" data-bs-toggle="modal"
+                            data-bs-target="#certModal8">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 9: Agile Methodology -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('static', filename='certifications/Agile Methdology.jpg') }}"
+                            alt="Agile Methodology" class="img-fluid mb-3"
+                            style="max-height: 180px; border-radius: 8px;">
+                        <h5 class="card-title text-orange">Agile Methodology</h5>
+                        <button type="button" class="btn btn-orange mt-2" data-bs-toggle="modal"
+                            data-bs-target="#certModal9">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Us Section -->
+<section id="contact" class="py-5" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title text-orange mb-4">Contact Us</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="bg-dark rounded p-4 h-100">
+                    <p class="mb-2 text-light"><i class="fas fa-envelope text-orange me-2"></i>
+                        sachinjalkote45@gmail.com</p>
+                    <p class="mb-2 text-light"><i class="fas fa-phone-alt text-orange me-2"></i> +91 7499924011</p>
+                    <p class="mb-2 text-light"><i class="fas fa-map-marker-alt text-orange me-2"></i> Solapur,
+                        Maharashtra, India</p>
+                    <div class="mb-2">
+                        <a href="https://github.com/SachinJalakoti2003" class="me-2" target="_blank"><i
+                                class="fab fa-github fa-2x text-orange"></i></a>
+                        <a href="https://www.linkedin.com/in/sachin-jalakoti-443560260/" class="me-2" target="_blank"><i
+                                class="fab fa-linkedin fa-2x text-orange"></i></a>
+                        <a href="https://www.facebook.com/sachin.jalakoti.1" class="me-2" target="_blank"><i
+                                class="fab fa-facebook fa-2x text-orange"></i></a>
+                        <a href="https://www.instagram.com/sachin_jalakoti_24/?next=%2F" target="_blank"><i
+                                class="fab fa-instagram fa-2x text-orange"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form action="/contact" method="POST" class="bg-dark rounded p-4">
+                    <div class="mb-3">
+                        <input type="text" name="name" class="form-control cool-input" placeholder="Your Name" required
+                            style="border-radius: 20px; background: #232325; color: #fff; border: 1.5px solid #FFA500; padding: 14px 18px; font-size: 1.1rem;">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="email" class="form-control cool-input" placeholder="Your Email"
+                            required
+                            style="border-radius: 20px; background: #232325; color: #fff; border: 1.5px solid #FFA500; padding: 14px 18px; font-size: 1.1rem;">
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="message" class="form-control cool-input" rows="4" placeholder="Your Message"
+                            required
+                            style="border-radius: 20px; background: #232325; color: #fff; border: 1.5px solid #FFA500; padding: 14px 18px; font-size: 1.1rem; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-orange w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Modal for Certificate -->
+<div class="modal fade" id="testbookCertModal" tabindex="-1" aria-labelledby="testbookCertModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="testbookCertModalLabel">Internship Certificate</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/Testbook Internship.jpg') }}"
+                    alt="Internship Certificate"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/Testbook Internship.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Certification Modals -->
+<!-- Modal 1 -->
+<div class="modal fade" id="certModal1" tabindex="-1" aria-labelledby="certModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="certModalLabel1">MLDS - GeekforGeeks</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/MLDS_geekforgeeks.jpg') }}"
+                    alt="MLDS GeekforGeeks"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/MLDS_geekforgeeks.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 2 -->
+<div class="modal fade" id="certModal2" tabindex="-1" aria-labelledby="certModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="certModalLabel2">Business Analytics</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/Business_Analytics Certificate.jpg') }}"
+                    alt="Business Analytics"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/Business_Analytics Certificate.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 3 -->
+<div class="modal fade" id="certModal3" tabindex="-1" aria-labelledby="certModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="certModalLabel3">Excel</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/Excel.jpg') }}" alt="Excel"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/Excel.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 4 -->
+<div class="modal fade" id="certModal4" tabindex="-1" aria-labelledby="certModalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="certModalLabel4">Statistics</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/Statistics.jpg') }}" alt="Statistics"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/Statistics.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 5 -->
+<div class="modal fade" id="certModal5" tabindex="-1" aria-labelledby="certModalLabel5" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="certModalLabel5">SQL</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/SQL.jpg') }}" alt="SQL"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/SQL.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 6 -->
+<div class="modal fade" id="certModal6" tabindex="-1" aria-labelledby="certModalLabel6" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="certModalLabel6">Python</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/Python.jpg') }}" alt="Python"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/Python.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 7 -->
+<div class="modal fade" id="certModal7" tabindex="-1" aria-labelledby="certModalLabel7" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="certModalLabel7">Tableau</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/Tableau.jpg') }}" alt="Tableau"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/Tableau.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 8 -->
+<div class="modal fade" id="certModal8" tabindex="-1" aria-labelledby="certModalLabel8" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="certModalLabel8">Power BI</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/Power BI.jpg') }}" alt="Power BI"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/Power BI.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 9 -->
+<div class="modal fade" id="certModal9" tabindex="-1" aria-labelledby="certModalLabel9" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-orange" id="certModalLabel9">Agile Methodology</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='certifications/Agile Methdology.jpg') }}"
+                    alt="Agile Methodology"
+                    style="max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="{{ url_for('static', filename='certifications/Agile Methdology.jpg') }}" download
+                    class="btn btn-outline-orange mt-3">Download Certificate</a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .certificate-hover:hover .view-certificate-btn {
+        display: flex !important;
+    }
+
+    .certificate-hover .view-certificate-btn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cool-input:focus {
+        border-color: #FF6B00 !important;
+        box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.15) !important;
+        background: #18191A !important;
+        color: #fff !important;
+    }
+
+    .cool-input::placeholder {
+        color: #ffb84d !important;
+        /* Light orange for visibility */
+        opacity: 1 !important;
+        font-size: 1.08rem;
+        font-weight: 500;
+    }
+</style>
+{% endblock %}
