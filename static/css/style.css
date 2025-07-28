@@ -224,6 +224,35 @@ footer.dark-footer {
     display: block;
 }
 
+/* Modal Enhancements */
+.modal {
+    z-index: 1050;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.show {
+    display: block !important;
+}
+
+.modal-content {
+    border: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .navbar-brand {
